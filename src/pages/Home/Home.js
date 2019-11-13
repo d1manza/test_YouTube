@@ -109,7 +109,10 @@ class Home extends React.Component {
             x4={this.state.x4}
             x1={this.state.x1}
           />
-          : <Favorites />}
+          :
+          <Favorites
+            searchQueryMas={this.state.searchQueryMas}
+          />}
       </div>
     )
   }

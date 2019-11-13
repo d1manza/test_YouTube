@@ -7,46 +7,40 @@ import FilterBar from './components/FilterBar'
 import PopUpWindow from './components/PopUpWindow'
 
 
-class Main extends React.Component {
-  state = {
-
-  }
-
-  render () {
-    return (
-      <div className="main">
-        <PopUpWindow
-          indicatorFavorites={this.props.indicatorFavorites}
-          changeIndicatorPopupWindow={this.props.changeIndicatorPopupWindow}
-          indicatorPopUpWindow={this.props.indicatorPopUpWindow}
-        />
-        <div className="header">
-          Поиск видео
-        </div>
-        <SearchLine
-          searchQuery={this.props.searchQuery}
-          inputSearchQuery={this.props.inputSearchQuery}
-          getListVideos={this.props.getListVideos}
-          indicatorFavorites={this.props.indicatorFavorites}
-          changeIndicatorFavorites={this.props.changeIndicatorFavorites}
-          totalResults={this.props.totalResults}
-        />
-        <FilterBar
-          searchQueryFilterBar={this.props.searchQueryFilterBar}
-          totalResults={this.props.totalResults}
-          x4={this.props.x4}
-          x1={this.props.x1}
-          changeIndicatorFilterX4={this.props.changeIndicatorFilterX4}
-          changeIndicatorFilterX1={this.props.changeIndicatorFilterX1}
-        />
-        <VideoList
-          videoList={this.props.videoList}
-          x4={this.props.x4}
-          x1={this.props.x1}
-        />
+function Main (props) {
+  return (
+    <div className="main">
+      <PopUpWindow
+        indicatorFavorites={props.indicatorFavorites}
+        changeIndicatorPopupWindow={props.changeIndicatorPopupWindow}
+        indicatorPopUpWindow={props.indicatorPopUpWindow}
+      />
+      <div className="header">
+        Поиск видео
       </div>
-    )
-  }
+      <SearchLine
+        searchQuery={props.searchQuery}
+        inputSearchQuery={props.inputSearchQuery}
+        getListVideos={props.getListVideos}
+        indicatorFavorites={props.indicatorFavorites}
+        changeIndicatorFavorites={props.changeIndicatorFavorites}
+        totalResults={props.totalResults}
+      />
+      <FilterBar
+        searchQueryFilterBar={props.searchQueryFilterBar}
+        totalResults={props.totalResults}
+        x4={props.x4}
+        x1={props.x1}
+        changeIndicatorFilterX4={props.changeIndicatorFilterX4}
+        changeIndicatorFilterX1={props.changeIndicatorFilterX1}
+      />
+      <VideoList
+        videoList={props.videoList}
+        x4={props.x4}
+        x1={props.x1}
+      />
+    </div>
+  )
 }
 
 export default Main;
