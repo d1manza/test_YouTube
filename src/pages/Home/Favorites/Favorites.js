@@ -2,8 +2,7 @@ import React from 'react';
 import './css/Favorites.css'
 
 function Favorites (props) {
-  const mas = ["a", "b", "c"]
-  const questionList = mas.map((question) => <li className="questionItem" key={props.question}>{props.question}</li>)
+  const questionList = props.searchQueryMas.map((question) => <li className="questionItem" key={question}>{question}</li>)
   return (
     <div className="favorites">
       <div className="heading">

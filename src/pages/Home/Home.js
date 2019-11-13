@@ -5,7 +5,7 @@ import Header from './Header/Header'
 import Main from './Main/Main'
 import Favorites from './Favorites/Favorites'
 
-const api_key="AIzaSyA9us6vBoPFTwVfUjoUlgIw6BofXcP3rGk"
+const api_key="AIzaSyDP-tyPRpCpxxjgQijsrXvD3iiUUNlnUJg"
 const max_result=50
 
 class Home extends React.Component {
@@ -45,19 +45,19 @@ class Home extends React.Component {
   }
   // Добавление в избранное
   changeIndicatorFavorites = event => {
-    if (this.state.searchQueryFilterBar!=="") {
-      this.setState({indicatorFavorites: !event.target.checked})
-      if (this.state.indicatorPopUpWindow===false) {
-        this.setState({indicatorPopUpWindow: true})
+    if (this.state.searchQueryFilterBar!=="") { // если есть значение в фильтр баре
+      this.setState({indicatorFavorites: !event.target.checked}) // то разрешай добавлять в избранное
+      if (this.state.indicatorPopUpWindow===false) { // если нет всплывающего окна
+        this.setState({indicatorPopUpWindow: true}) // вызывай его
       }
-      if (!this.state.indicatorFavorites===true) {
+      if (!this.state.indicatorFavorites===true) { // если нажата кнопка добавить в избранное
         this.setState(prevState => ({
-          searchQueryMas: [...prevState.searchQueryMas, this.state.searchQueryFilterBar]
+          searchQueryMas: [...prevState.searchQueryMas, this.state.searchQueryFilterBar] // добавляй запись в массив
         }))
       }
     }
   }
-  // Нажатие на сердечко, чтобы добавить в избранное
+  // Изменение индикатора всплывающего окна, когда нажата кнопка добавить в избранное
   changeIndicatorPopupWindow = event => {
     if (this.state.indicatorFavorites===true) {
       this.setState({indicatorPopUpWindow: false})
