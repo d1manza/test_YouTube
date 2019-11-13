@@ -24,6 +24,18 @@
   background-position: bottom center;
 }
 
+.Home > div.header > div.linkLayout > a.link {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  color: #1390E5;
+  text-decoration: none;
+  background: none;
+  border: none;
+  outline: none;
+}
+
 .Home > div.header > div.linkLayout > button.link {
   font-style: normal;
   font-weight: normal;
