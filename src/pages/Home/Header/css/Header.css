@@ -24,7 +24,7 @@
   background-position: bottom center;
 }
 
-.Home > div.header > div.linkLayout > a.link {
+.Home > div.header > div.linkLayout > button.link {
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -36,7 +36,7 @@
   outline: none;
 }
 
-.Home > div.header > div.linkLayout > button.link {
+.Home > div.header > div.linkLayout > a.link {
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
