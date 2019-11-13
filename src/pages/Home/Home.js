@@ -75,8 +75,7 @@ class Home extends React.Component {
     for (var i=0; i<items.length; i++) {
       videoList[i]=[items[i].snippet.thumbnails.medium.url, items[i].snippet.title, items[i].snippet.channelTitle]
     }
-    this.setState({videoList: videoList})
-    this.setState({searchQueryFilterBar: this.state.searchQuery})
+    this.setState({videoList: videoList, searchQueryFilterBar: this.state.searchQuery})
   }
   render () {
     return (
