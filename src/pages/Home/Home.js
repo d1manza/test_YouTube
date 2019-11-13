@@ -21,6 +21,7 @@ class Home extends React.Component {
     indicatorFavorites: false,
     indicatorPopUpWindow: true
   }
+  // Переключение кнопок навигации
   changeRouteHome = event => {
     this.setState({ route: "/Home" });
   }
@@ -31,15 +32,18 @@ class Home extends React.Component {
     this.setState({ route: "/" });
     localStorage.clear()
   }
+  // Считывание поискового запроса
   inputSearchQuery = event => {
     this.setState({ searchQuery: event.target.value });
   }
+  // Фильтры на вывод таблицы видео
   changeIndicatorFilterX4 = event => {
     this.setState({x4: true, x1: false})
   }
   changeIndicatorFilterX1 = event => {
     this.setState({x4: false, x1: true})
   }
+  // Добавление в избранное
   changeIndicatorFavorites = event => {
     if (this.state.searchQueryFilterBar!=="") {
       this.setState({indicatorFavorites: !event.target.checked})
@@ -53,11 +57,13 @@ class Home extends React.Component {
       }
     }
   }
+  // Нажатие на сердечко, чтобы добавить в избранное
   changeIndicatorPopupWindow = event => {
     if (this.state.indicatorFavorites===true) {
       this.setState({indicatorPopUpWindow: false})
     }
   }
+  // Получение списка видео
   getListVideos = async (event) => {
     event.preventDefault()
     let searchQuery = this.state.searchQuery
@@ -73,7 +79,6 @@ class Home extends React.Component {
     this.setState({searchQueryFilterBar: this.state.searchQuery})
   }
   render () {
-    console.log(this.state.searchQueryMas)
     return (
       <div className="Home">
         <Header
@@ -85,17 +90,21 @@ class Home extends React.Component {
         {this.state.route === "/Home"
           ?
           <Main
+            // Высплывающее окно
             indicatorFavorites={this.state.indicatorFavorites}
             changeIndicatorPopupWindow={this.changeIndicatorPopupWindow}
             indicatorPopUpWindow={this.state.indicatorPopUpWindow}
+            // Строка поиска
             searchQuery={this.state.searchQuery}
             inputSearchQuery={this.inputSearchQuery}
             getListVideos={this.getListVideos}
             changeIndicatorFavorites={this.changeIndicatorFavorites}
+            // Фильтр бар
             searchQueryFilterBar={this.state.searchQueryFilterBar}
             totalResults={this.state.totalResults}
             changeIndicatorFilterX4={this.changeIndicatorFilterX4}
             changeIndicatorFilterX1={this.changeIndicatorFilterX1}
+            // Таблица видео
             videoList={this.state.videoList}
             x4={this.state.x4}
             x1={this.state.x1}
