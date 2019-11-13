@@ -1,0 +1,17 @@
+[
+  {
+    "login": "admin",
+    "password": "admin",
+    "token": ""
+  },
+  {
+    "login": "abc",
+    "password": "abc",
+    "token": ""
+  },
+  {
+    "login": "aaa",
+    "password": "aaa",
+    "token": ""
+  }
+]

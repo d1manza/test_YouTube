@@ -1,0 +1,10 @@
+.notFound {
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 25%;
+  width: 50%;
+}

@@ -1,0 +1,37 @@
+.Home > div.header {
+  height: 60px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #E5E5E5;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 14% 8% 10% 45% 8% 15%;
+}
+
+.Home > div.header > div.logo {
+  background: url(./../../../Auth/css/image/sibdev-logo.png) no-repeat;
+  background-position: center right 10%;
+  background-size: 35%;
+}
+
+.Home > div.header > div.linkLayout {
+  align-self: center;
+  justify-self: center;
+}
+
+.Home > div.header > div.linkLayout--active {
+  background: url(./image/line.png) no-repeat;
+  background-position: bottom center;
+}
+
+.Home > div.header > div.linkLayout > button.link {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  color: #1390E5;
+  text-decoration: none;
+  background: none;
+  border: none;
+  outline: none;
+}
