@@ -50,7 +50,7 @@ class Home extends React.Component {
       if (this.state.indicatorPopUpWindow===false) { // если нет всплывающего окна
         this.setState({indicatorPopUpWindow: true}) // вызывай его
       }
-      if (!this.state.indicatorFavorites===true) { // если нажата кнопка добавить в избранное
+      if (!this.state.indicatorFavorites===true && !this.state.searchQueryMas.includes(this.state.searchQueryFilterBar)) { // если нажата кнопка добавить в избранное и значения нет в массиве
         this.setState(prevState => ({
           searchQueryMas: [...prevState.searchQueryMas, this.state.searchQueryFilterBar] // добавляй запись в массив
         }))
